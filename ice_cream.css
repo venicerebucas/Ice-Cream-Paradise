@@ -1,0 +1,177 @@
+body {
+    background-image: url("ice_cream.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 2rem 2rem;
+}
+
+header h1 {
+    font-family: cursive;
+    font-size: 2.5rem;
+    color: #FF748C;
+    margin: 0;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid #777;
+    background-color: pink;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: orchid;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover {
+    color: purple;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: serif;
+    color: #555;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #2ecc71;
+    border-radius: 2px;
+}
+
+main {
+    flex: 2;
+    padding: 1rem; 
+}
+
+.flavor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    list-style: none;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flavor-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.flavor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.flavor-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.flavor-card h3 {
+    color: #333;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.flavor-card .description {
+    color: #222;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+.flavor-card .price {
+    color: green;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+    text-align: right;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: pink;
+}
+
+.about-text {
+    text-align: center;
+    font-family: serif;
+    font-size: 1.5rem;
+    color: #444;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    line-height: 1.8;
+    position: relative;
+}
+
+.about-text::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #2ecc71, transparent);
+    border-radius: 2px;
+}
+
+    
